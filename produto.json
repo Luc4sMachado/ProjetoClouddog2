@@ -1,0 +1,19 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Bacon",
+      "valor": 4.50,
+      "categoria": "Alimento",
+      "descricao": "Muito bom"
+    },
+    {
+      "id": 2,
+      "nome": "Batata",
+      "valor": 8,
+      "categoria": "Alimento",
+      "descricao": "Muito bom"
+    }
+   
+  ]
+}

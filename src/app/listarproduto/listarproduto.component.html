@@ -1,0 +1,24 @@
+<table style="width: 100%; border: 1px; background-color: white;">  
+    <thead>
+        <tr>
+            <th style="width: 15%;">No</th>
+            <th style="width: 15%;">Produto</th>
+            <th style="width: 15%;">Preço</th>
+            <th style="width: 15%;">Categoria</th>
+            <th style="width: 15%;">Descrição</th>
+        </tr>
+        <tr *ngFor="let produto of produtos">
+            <td style="padding-left: 6%;">{{produto.id}}</td>
+            <td style="padding-left: 6%;">{{produto.nome}}</td>
+            <td style="padding-left: 6%;">{{produto.valor | currency}}</td>
+            <td style="padding-left: 6%;">{{produto.categoria}}</td>
+            <td style="padding-left: 6%;">{{produto.descricao}}</td>
+            <td>
+                <button mat-button class="btn btn-outline-warning mb-1 btn-sm">Atualizar</button>
+                <button mat-button class="btn btn-outline-danger mb-1 btn-sm">Remover</button>
+            </td>
+        </tr>
+    </thead>
+</table>
+
+  

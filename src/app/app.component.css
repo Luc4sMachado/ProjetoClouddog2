@@ -1,0 +1,16 @@
+mat-sidenav-container{
+    height: 100%;
+    height: 54,1em; background-size: cover; width: auto;
+    background-image: url(src/assets/imagens/fundoclouddog.jpeg);
+}
+
+mat-sidenav, mat-sidenav-content{
+    padding: 16px;
+}
+
+mat-sidenav{
+    background-color: darkorange;
+    width: 300px;
+    
+}
+
