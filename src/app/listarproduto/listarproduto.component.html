@@ -1,21 +1,19 @@
-<table style="width: 100%; border: 1px; background-color: white;">  
+<table style="width: 100%; border: 1px">  
     <thead>
         <tr>
-            <th style="width: 15%;">No</th>
             <th style="width: 15%;">Produto</th>
             <th style="width: 15%;">Preço</th>
             <th style="width: 15%;">Categoria</th>
             <th style="width: 15%;">Descrição</th>
         </tr>
         <tr *ngFor="let produto of produtos">
-            <td style="padding-left: 6%;">{{produto.id}}</td>
-            <td style="padding-left: 6%;">{{produto.nome}}</td>
+            <td style="padding-left: 6%;">{{produto.titulo}}</td>
             <td style="padding-left: 6%;">{{produto.valor | currency}}</td>
             <td style="padding-left: 6%;">{{produto.categoria}}</td>
             <td style="padding-left: 6%;">{{produto.descricao}}</td>
             <td>
-                <button mat-button class="btn btn-outline-warning mb-1 btn-sm">Atualizar</button>
-                <button mat-button class="btn btn-outline-danger mb-1 btn-sm">Remover</button>
+                <button mat-button class="btn btn-outline-warning mb-1 btn-sm" style="padding-left: 6%; border-color: chartreuse; color: chartreuse; background-color:white;" (click)= "onEdit(produto.id)">Atualizar</button>
+                <button mat-button class="btn btn-outline-danger mb-1 btn-sm" style="padding-left: 6%; border-color: red; color: red; background-color:white" (click)= "deleteProdutos(produto)">Remover</button>
             </td>
         </tr>
     </thead>

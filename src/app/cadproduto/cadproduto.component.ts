@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Produto } from './cadproduto';
+import { Produto, Categoria } from './cadproduto';
 import { CadprodutoService } from './cadproduto.service';
 
 @Component({
@@ -13,15 +13,22 @@ export class CadprodutoComponent implements OnInit {
   codigo:number=0;
   produtos:Produto[]=[];
   produtoCodigo: Produto;
+  categoria : Categoria;
+  codigocat : number=0;
+  categorias : Categoria[] = [];
 
   constructor(public service: CadprodutoService) {
     
     this.produtoCodigo=new Produto();
     this.codigo =0;
     this.produto= new Produto();
+    this.codigocat =0;
+    this.categoria = new Categoria();
   }
   ngOnInit(): void {
     this.carregarProdutos();
+    this.carregarCategoria();
+
   }
 
   public carregarProdutos(){
@@ -35,8 +42,14 @@ export class CadprodutoComponent implements OnInit {
 
   public salvar(){
     this.service.gravar(this.produto).subscribe(res=>{console.log('Produto Gravado ...')});
+    window.location.reload();
   }
   public alerta(){
     alert("Produto Cadastrado");
   }
+
+  public carregarCategoria(){
+    return this.service.listarCategoria().subscribe(res=>{this.categorias=res;})
+  } 
+
 }

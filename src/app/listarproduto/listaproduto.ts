@@ -1,7 +1,12 @@
 export class Produto{
     id: number;
-    nome: string;
+    titulo: string;
     categoria: string;
     descricao : string;
     valor : number;
+  }
+
+  export class Categoria{
+    id: number;
+    categoria: string;
   }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Produto } from './listaproduto';
 
 import { ListaprodutoService } from './listarproduto.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-listarproduto',
@@ -15,7 +16,7 @@ export class ListarprodutoComponent implements OnInit {
   produtos:Produto[]=[];
   produtoCodigo: Produto;
 
-  constructor(public service: ListaprodutoService) {
+  constructor(public service: ListaprodutoService, private router : Router, private route: ActivatedRoute) {
     
     this.produtoCodigo=new Produto();
     this.codigo =0;
@@ -38,4 +39,20 @@ export class ListarprodutoComponent implements OnInit {
     this.service.gravar(this.produto).subscribe(res=>(console.log('Produto Gravado ...')));
     
   }
+
+  deleteProdutos(produto:Produto){
+    this.service.deleteProdutos(produto).subscribe(() =>{
+      this.service.buscar(this.codigo);
+      window.location.reload();
+    })
+
+    
+  }
+
+  onEdit(id){
+    this.router.navigate(['editar', id]);
+  }
+
+ 
+
 }

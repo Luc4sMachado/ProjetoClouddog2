@@ -1,21 +1,28 @@
 <form >
     <mat-form-field class="example-full-width">
       <mat-label>Nome do produto</mat-label>
-      <input matInput placeholder="Ex. Bacon" type="text" name="nome" [(ngModel)]="produto.nome" id="nome">
+      <input matInput placeholder="Ex. Bacon" type="text" name="nome" [(ngModel)]="produto.titulo" id="nome">
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Preço do produto</mat-label>
       <input matInput placeholder="Ex. 4.50" type="number" name="valor" [(ngModel)]="produto.valor" id="valor">
     </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <mat-label>Categoria do produto</mat-label>
-      <input matInput placeholder="Ex. Alimento" type="text" name="categoria" [(ngModel)]="produto.categoria" id="categoria">
-    </mat-form-field>
+    
     <mat-form-field class="example-full-width">
       <mat-label>Descrição do produto</mat-label>
       <input matInput placeholder="Ex. Sensacional maravilhoso" type="text" name="descricao" [(ngModel)]="produto.descricao" id="descricao">
     </mat-form-field> 
-   
-    <button style="width: 240px; height: 80px;font-size: 20px;background-color: greenyellow;" mat-button type="button" (click)="salvar(); alerta();"> Confirmar </button>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Selecione a categoria</mat-label>
+      <mat-select placeholder="Ex. Alimento" type="text" name="categoria" [(ngModel)]="produto.categoria" id="categoria">
+        <mat-option *ngFor="let categoria of categorias" value={{categoria.categoria}}>
+          {{categoria.categoria}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
     
+   <div>
+    <button style="width: 240px; height: 80px;font-size: 20px;background-color: greenyellow; " mat-button type="button" (click)="salvar(); alerta();"> Confirmar </button>
+  </div>
   </form>

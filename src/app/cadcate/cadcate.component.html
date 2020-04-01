@@ -1,7 +1,7 @@
 <form class="example-form">
     <mat-form-field class="example-full-width">
       <mat-label>Cadastre a Categoria</mat-label>
-      <input matInput placeholder="Ex. Alimento">
+      <input matInput placeholder="Ex. Alimento" type="text" name="categoria" [(ngModel)]="categoria.categoria" id="categoria">
     </mat-form-field>  
-    <button style="width: 240px; height: 80px;font-size: 20px;background-color: greenyellow;" mat-button> Confirmar </button>
+    <button style="width: 240px; height: 80px;font-size: 20px;background-color: greenyellow;" mat-button (click)="salvarcate(); alerta();"> Confirmar </button>
   </form>

@@ -1,19 +1,54 @@
 {
   "produtos": [
     {
-      "id": 1,
-      "nome": "Bacon",
-      "valor": 4.50,
-      "categoria": "Alimento",
-      "descricao": "Muito bom"
+      "titulo": "pera",
+      "valor": 12,
+      "categoria": "Fruta",
+      "descricao": "éae",
+      "id": 7
     },
     {
-      "id": 2,
-      "nome": "Batata",
-      "valor": 8,
+      "titulo": "Bacon",
+      "valor": 4.5,
+      "descricao": "Sensasional Maravilhoso",
       "categoria": "Alimento",
-      "descricao": "Muito bom"
+      "id": 8
+    },
+    {
+      "titulo": "Feijao",
+      "valor": 9,
+      "descricao": "dona rosa",
+      "categoria": "Alimento",
+      "id": 9
+    },
+    {
+      "titulo": "Porche",
+      "valor": 99999,
+      "descricao": "Incrivel",
+      "categoria": "Carro",
+      "id": 10
     }
-   
+  ],
+  "categoria": [
+    {
+      "categoria": "Comida",
+      "id": 1
+    },
+    {
+      "categoria": "Alimento",
+      "id": 2
+    },
+    {
+      "categoria": "Fruta",
+      "id": 3
+    },
+    {
+      "categoria": "Carro",
+      "id": 4
+    },
+    {
+      "categoria": "Moto",
+      "id": 5
+    }
   ]
 }
